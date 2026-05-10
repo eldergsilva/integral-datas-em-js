@@ -6,7 +6,6 @@ const taValendo = (inicio, solicitacao) => {
     console.log(resultado)
     return resultado
 }
-
 // Testes
 taValendo(
     new Date(2021, 3, 26, 8, 0),   
