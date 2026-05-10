@@ -8,18 +8,18 @@ const mesesAbrev = [
     'jul', 'ago', 'set', 'out', 'nov', 'dez'
 ]
 
-// Helper para garantir 2 dígitos no dia
+
 const dia = (data) => String(data.getUTCDate()).padStart(2, '0')
 const mes = (data) => data.getUTCMonth()
 
-// a) 05 de outubro de 2020
+
 const formatA = (data) => {
     const resultado = `${dia(data)} de ${meses[mes(data)]} de ${data.getUTCFullYear()}`
     console.log(resultado)
     return resultado
 }
 
-// b) 05/10/2020
+
 const formatB = (data) => {
     const numMes = String(mes(data) + 1).padStart(2, '0')
     const resultado = `${dia(data)}/${numMes}/${data.getUTCFullYear()}`
@@ -27,36 +27,36 @@ const formatB = (data) => {
     return resultado
 }
 
-// c) 5 out
+
 const formatC = (data) => {
     const resultado = `${data.getUTCDate()} ${mesesAbrev[mes(data)]}`
     console.log(resultado)
     return resultado
 }
 
-// d) 05 out 2020
+
 const formatD = (data) => {
     const resultado = `${dia(data)} ${mesesAbrev[mes(data)]} ${data.getUTCFullYear()}`
     console.log(resultado)
     return resultado
 }
 
-// e) 05 de out de 2020
+
 const formatE = (data) => {
     const resultado = `${dia(data)} de ${mesesAbrev[mes(data)]} de ${data.getUTCFullYear()}`
     console.log(resultado)
     return resultado
 }
 
-// f) 05/out
+
 const formatF = (data) => {
     const resultado = `${dia(data)}/${mesesAbrev[mes(data)]}`
     console.log(resultado)
     return resultado
 }
 
-// Testes
-const data = new Date(2020, 9, 5) // 05/10/2020
+
+const data = new Date(2020, 9, 5) 
 
 formatA(data) // 05 de outubro de 2020
 formatB(data) // 05/10/2020
